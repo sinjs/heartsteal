@@ -19,7 +19,7 @@ public final class Main extends JavaPlugin {
             getLogger().severe("******************************************************");
         }
 
-        getServer().getPluginManager().registerEvents(new PlayerKilledListener(), this);
+        getServer().getPluginManager().registerEvents(new PlayerKilledListener(this), this);
         getLogger().info("Class PlayerKilledListener was registered");
 
         this.getCommand("set-hearts").setExecutor(new SetHeartsCommand());
