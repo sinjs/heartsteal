@@ -1,4 +1,4 @@
-# HeartSteal
+# [HeartSteal](https://www.spigotmc.org/resources/heartsteal.96147/)
 
 A Minecraft Plugin: Steal hearts from players by killing them. This is the source code for the Minecraft Plugin
 HeartSteal. This plugin is inspired from the LifeStealSMP on YouTube. Have fun!
