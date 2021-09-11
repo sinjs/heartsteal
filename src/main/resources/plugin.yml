@@ -1,0 +1,13 @@
+name: HeartSteal
+version: '${project.version}'
+main: net.sinjs.heartsteal.heartsteal.Main
+api-version: 1.17
+prefix: HeartSteal
+authors: [ sinjs ]
+description: Steal hearts from players by killing them.
+website: https://sinjs.cf
+commands:
+  set-hearts:
+    description: Set the hearts of a player
+    usage: /<command> <player> <hearts>
+    permission: heartsteal.sethearts
