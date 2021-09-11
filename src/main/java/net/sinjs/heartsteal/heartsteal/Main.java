@@ -1,11 +1,17 @@
 package net.sinjs.heartsteal.heartsteal;
 
+import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class Main extends JavaPlugin {
+    FileConfiguration config = getConfig();
 
     @Override
     public void onEnable() {
+        config.addDefault("no-hearts-ban", true);
+        config.options().copyDefaults(true);
+        saveConfig();
+
         if (!getServer().getVersion().contains("Paper")) {
             getLogger().severe("******************************************************");
             getLogger().severe("* Please use Paper instead of Spigot or CraftBukkit. *");
