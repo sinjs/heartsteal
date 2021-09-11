@@ -1,16 +1,23 @@
 package net.sinjs.heartsteal.heartsteal;
 
 import org.bukkit.Bukkit;
+import org.bukkit.GameMode;
 import org.bukkit.attribute.Attribute;
 import org.bukkit.attribute.AttributeInstance;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.PlayerDeathEvent;
+import org.bukkit.plugin.Plugin;
 
 
 public class PlayerKilledListener implements Listener {
     public final int HEART_HP = 2;
+    private final Plugin plugin;
+
+    public PlayerKilledListener(Plugin plugin) {
+        this.plugin = plugin;
+    }
 
     @EventHandler
     public void onPlayerDeath(PlayerDeathEvent event) {
@@ -24,7 +31,12 @@ public class PlayerKilledListener implements Listener {
 
         if (max_health.getBaseValue() - this.HEART_HP <= 0) {
             Bukkit.getLogger().info("Player " + p.getName() + " lost all of his hearts.");
-            p.banPlayer("You lost all of your hearts!");
+            if (this.plugin.getConfig().getBoolean("no-hearts-ban")) {
+                p.banPlayer("You lost all of your hearts!");
+            } else {
+                p.sendMessage("§c§lYou lost all of your hearts, you are now spectating the world.");
+                p.setGameMode(GameMode.SPECTATOR);
+            }
             return;
         }
 
