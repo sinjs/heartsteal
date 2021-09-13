@@ -27,8 +27,6 @@ public class PlayerKilledListener implements Listener {
 
         assert max_health != null;
 
-        max_health.setBaseValue(max_health.getBaseValue() - this.HEART_HP);
-
         if (max_health.getBaseValue() - this.HEART_HP <= 0) {
             Bukkit.getLogger().info("Player " + p.getName() + " lost all of his hearts.");
             if (this.plugin.getConfig().getBoolean("no-hearts-ban")) {
@@ -39,6 +37,8 @@ public class PlayerKilledListener implements Listener {
             }
             return;
         }
+        
+        max_health.setBaseValue(max_health.getBaseValue() - this.HEART_HP);
 
         Bukkit.getLogger().info("Player " + p.getName() + " lost one heart.");
 
