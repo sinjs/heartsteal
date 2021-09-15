@@ -9,6 +9,7 @@ public final class Main extends JavaPlugin {
     @Override
     public void onEnable() {
         config.addDefault("no-hearts-ban", true);
+        config.addDefault("enable-hearts", true);
         config.options().copyDefaults(true);
         saveConfig();
 
