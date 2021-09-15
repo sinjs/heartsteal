@@ -20,7 +20,7 @@ public final class Main extends JavaPlugin {
         }
 
         getServer().getPluginManager().registerEvents(new PlayerKilledListener(this), this);
-        getLogger().info("Class PlayerKilledListener was registered");
+        getServer().getPluginManager().registerEvents(new PlayerInteractListener(this), this);
 
         this.getCommand("set-hearts").setExecutor(new SetHeartsCommand());
 
