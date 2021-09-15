@@ -26,6 +26,8 @@ public class PlayerInteractListener implements Listener {
         if (event.getHand() != EquipmentSlot.HAND) return;
         if (event.getAction() == Action.RIGHT_CLICK_AIR || event.getAction() == Action.RIGHT_CLICK_BLOCK) {
             if (i.getType() == Material.RED_DYE && i.getItemMeta().getCustomModelData() == 4450001) {
+                if (!this.plugin.getConfig().getBoolean("hearts-enabled")) return;
+
                 AttributeInstance max_health = p.getAttribute(Attribute.GENERIC_MAX_HEALTH);
                 assert max_health != null;
 
