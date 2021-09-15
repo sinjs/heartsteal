@@ -12,6 +12,11 @@ import org.bukkit.plugin.Plugin;
 
 public class HeartCraftingRecipe {
     public static void addRecipe(Plugin plugin) {
+        if (!plugin.getConfig().getBoolean("enable-hearts")) {
+            Bukkit.getLogger().info("Not registering HeartCrafting recipe, enable-hearts is false.");
+            return;
+        }
+
         ItemStack item = new ItemStack(Material.RED_DYE);
         ItemMeta meta = item.getItemMeta();
 
