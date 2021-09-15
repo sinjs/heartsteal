@@ -16,10 +16,11 @@ public class HeartCraftingRecipe {
         ItemMeta meta = item.getItemMeta();
 
         meta.setDisplayName("§c§lHeart");
+        meta.setCustomModelData(4450001);
         item.setItemMeta(meta);
 
         item.addUnsafeEnchantment(Enchantment.DURABILITY, 1);
-        item.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+        item.addItemFlags(ItemFlag.HIDE_ATTRIBUTES, ItemFlag.HIDE_ENCHANTS);
 
         NamespacedKey key = new NamespacedKey(plugin, "heart");
         ShapedRecipe recipe = new ShapedRecipe(key, item);
