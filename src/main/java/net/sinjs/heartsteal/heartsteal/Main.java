@@ -23,6 +23,8 @@ public final class Main extends JavaPlugin {
         getLogger().info("Class PlayerKilledListener was registered");
 
         this.getCommand("set-hearts").setExecutor(new SetHeartsCommand());
+
+        HeartCraftingRecipe.addRecipe(this);
     }
 
     @Override
