@@ -34,7 +34,7 @@ public class HeartCraftingRecipe {
 
         recipe.setIngredient('R', Material.REDSTONE);
         recipe.setIngredient('B', Material.REDSTONE_BLOCK);
-        recipe.setIngredient('D', Material.DIAMOND);
+        recipe.setIngredient('D', Material.DIAMOND_BLOCK);
 
         Bukkit.addRecipe(recipe);
     }
