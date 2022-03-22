@@ -30,11 +30,12 @@ public class HeartCraftingRecipe {
         NamespacedKey key = new NamespacedKey(plugin, "heart");
         ShapedRecipe recipe = new ShapedRecipe(key, item);
 
-        recipe.shape("RDR", "BDB", "RDR");
+        recipe.shape("RNR", "BEB", "RNR");
 
         recipe.setIngredient('R', Material.REDSTONE);
         recipe.setIngredient('B', Material.REDSTONE_BLOCK);
-        recipe.setIngredient('D', Material.DIAMOND_BLOCK);
+        recipe.setIngredient('N', Material.NETHERITE_BLOCK);
+        recipe.setIngredient('E', Material.ELYTRA);
 
         Bukkit.addRecipe(recipe);
     }
