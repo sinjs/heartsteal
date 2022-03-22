@@ -1,7 +1,7 @@
 name: HeartSteal
 version: '${project.version}'
 main: net.sinjs.heartsteal.heartsteal.Main
-api-version: 1.17
+api-version: 1.18
 prefix: HeartSteal
 authors: [ sinjs ]
 description: Steal hearts from players by killing them.
