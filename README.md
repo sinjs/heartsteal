@@ -5,9 +5,9 @@ HeartSteal. This plugin is inspired from the LifeStealSMP on YouTube. Have fun!
 
 ## Plugin information
 
-- **Version:** 1.17.X
+- **Version:** 1.18.X
 - **Server Software:** Paper / Spigot
-- **Java Version:** 16.0.2
+- **Java Version:** 17.0.2
 - **Dependencies:** none
 - **Soft Dependencies:** none
 
